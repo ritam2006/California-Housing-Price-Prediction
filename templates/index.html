@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>California Housing Price Predictor</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="/result/" method="post">
+        <div id="container">
+            <h1 id="title"><span class="california">California</span> Housing <span class="california">Price</span> Predictor</h1>
+            <div id="input-grid">
+                <div class="input-container">
+                    <label>Longitude:</label><input name="longitude" type="text">
+                </div>
+                <div class="input-container">
+                    <label>Latitude:</label><input name="latitude" type="text">
+                </div>
+                <div class="input-container">
+                    <label>Housing Median Age:</label><input name="med_age" type="text">
+                </div>
+                <div class="input-container">
+                    <label>Total Rooms:</label><input name="total_rooms" type="text">
+                </div>
+                <div class="input-container">
+                    <label>Total Bedrooms:</label> <input name="total_bedrooms" type="text">
+                </div>
+                <div class="input-container">
+                    <label>Population:</label><input name="population" type="text">
+                </div>
+                <div class="input-container">
+                    <label>Households:</label><input name="households" type="text">
+                </div>
+                <div class="input-container">
+                    <label>Median Income:</label><input name="med_income" type="text">
+                </div>
+                <div class="input-container">
+                    <label>Ocean Proximity:</label>
+                    <select name="ocean_proximity" id="ocean_proximity">
+                        <option value="&lt;1H OCEAN">&lt;1 Hour From Ocean</option>
+                        <option value="INLAND">Inland</option>
+                        <option value="ISLAND">Island</option>
+                        <option value="NEAR BAY">Near Bay</option>
+                        <option value="NEAR OCEAN">Near Ocean</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" id="enter">Enter</button>
+            <h2 id="result" class="{{state}}">{{result}}</h2>
+        </div>
+    </form>
+</body>
+</html>
